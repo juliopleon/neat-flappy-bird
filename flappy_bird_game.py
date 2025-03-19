@@ -145,14 +145,20 @@ class Base:
         self.x2 = self.WIDTH
 
     def move(self):
+        # move base image with velocity
         self.x1 -= self.VEL
         self.x2 -= self.VEL
-
+        
+        # if base img is no longer on screen cycle it back
         if self.x1 + self.WIDTH < 0:
             self.x1 = self.x2 + self.WIDTH
-
+        # second image same logic/no longer on screen cycle back
         if self.x2 + self.WIDTH < 0:
             self.x2 = self.x1 + self.WIDTH
+
+    def draw(self, win):
+        win.blit(self.IMG, (self.x1, self.y))
+        win.blit(self.IMG, (self.x2, self.y))
 
 
 def draw_window(win, bird):
