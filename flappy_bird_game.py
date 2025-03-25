@@ -210,7 +210,10 @@ def main():
             pipes.append(Pipe(600))
 
         for r in rem:
-            pipes.remove(r)    
+            pipes.remove(r)
+
+        if bird.y + bird.img.get_height() >= 730:
+            pass    
 
         base.move()
         draw_window(win, bird, pipes, base)
