@@ -222,7 +222,7 @@ def main():
             pass    
 
         base.move()
-        draw_window(win, bird, pipes, base, score);
+        draw_window(win, bird, pipes, base, score)
 
     pygame.quit()
     quit()
