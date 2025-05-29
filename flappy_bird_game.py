@@ -209,7 +209,7 @@ def main():
                 pipe.passed = True
                 add_pipe = True
 
-            pipe.move()
+            pipe.move():
 
         if add_pipe:
             score += 1
